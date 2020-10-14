@@ -1,0 +1,52 @@
+@import 'https://cdn.bootcss.com/font-awesome/5.10.0-11/css/all.min.css';
+
+.search-box {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    
+
+	margin: auto;
+    height: 30px;
+    padding: 10px;
+
+    border-radius: 25px;
+    background: #e84118;
+	
+}
+
+.search-btn {
+	color:white;
+	float: right;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.4s;
+}
+
+.search-box:hover > .search-txt {
+	width: 240px;
+	padding: 0 10px;
+}
+
+.search-box:hover > .search-btn {
+    background:  #e84118;
+}
+
+.search-txt {
+	border: none;
+	background: none;
+	outline: none;
+	float: left;
+    padding: 0;
+	color: white;
+	font-size: 16px;
+	transition: 0.4s;
+	line-height: 30px;
+	width: 0px;
+}

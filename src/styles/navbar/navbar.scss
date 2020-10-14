@@ -1,0 +1,156 @@
+@import './search.scss';
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: $navbar-height;
+    padding: ($navbar-height - $navbar-menu-height) / 2 0;
+
+    background: #090723;
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $navbar-menu-height;
+    margin: 0; /* 设置内边距为 0，防止浏览器默认值 */
+    padding: 0; /* 设置内边距为 0，防止浏览器默认值 */
+}
+
+ul li {
+    display: inline-block; /* 行内块元素 */
+    margin: 5px; /* 保持两个菜单之间的距离 */
+
+    list-style: none; /* 去除列表符号 */
+}
+
+ul li a {
+    position: relative; /* 设置定位 relative，便于内部 span 绝对定位 */
+
+    display: inline-block;
+    padding: 8px; /* 设置内边距，撑开，保持与 span 的举例*/
+    overflow: hidden; /* span 超出的部分隐藏，关键！ */
+
+    font-size: $navbar-menu-font-size;
+    color: #000; /* 字体默认是黑色 */
+    text-decoration: none; /* 去除 a 标签的底部横线 */
+    text-shadow: 0 0 5px #1e90ff, 0 0 10px #1e90ff, 0 0 15px #1e90ff; /* 增加文字阴影 */
+    transition: 0.3s; /* 过渡实践 */
+
+    line-height: 1em;
+}
+
+ul li a:hover {
+    color: #ddd; /* 悬浮 a 标签时改变文字颜色 */
+}
+
+ul li a span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 2px;
+    height: 100%;
+
+    background-color: #747d8c;
+
+    transform: translateY(0);
+}
+
+ul li a:hover span:nth-child(1) {
+    transition: 0.5s;
+    transform: translateY(-100%);
+}
+
+ul li a span:nth-child(4) {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 2px;
+    height: 100%;
+
+    background-color: #747d8c;
+    transform: translateY(0);
+}
+
+ul li a:hover span:nth-child(4) {
+    transition: 0.5s;
+    transform: translateY(100%);
+}
+
+ul li a span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: #747d8c;
+    transform: translateX(-100%);
+}
+
+ul li a:hover span:nth-child(2) {
+    transition: 0.75s;
+    transform: translateX(100%);
+    transition-delay: 0.25s;
+}
+
+ul li a span:nth-child(5) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: #747d8c;
+    transform: translateX(100%);
+}
+
+ul li a:hover span:nth-child(5) {
+    transition: 0.75s;
+    transform: translateX(-100%);
+    transition-delay: 0.25s;
+}
+
+ul li a span:nth-child(3) {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 2px;
+    height: 100%;
+
+    background-color: #747d8c;
+    transform: translateY(-100%);
+}
+
+ul li a:hover span:nth-child(3) {
+    transition: 0.5s;
+    transform: translateX(0);
+    transition-delay: 0.6s;
+}
+
+ul li a span:nth-child(6) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #747d8c;
+    transform: translateY(100%);
+}
+
+ul li a:hover span:nth-child(6) {
+    transition: 0.5s;
+    transform: translateX(0);
+    transition-delay: 0.6s;
+}
